@@ -74,3 +74,38 @@ body {
   display: flex;
   justify-content: space-around;
 }
+
+.room_adult_child{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.room_adult_child .div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inner_div{
+  display: flex;
+  align-items: center;
+}
+
+.number_input{
+  width: 2rem;
+  text-align: center;
+  border: none;
+    cursor: pointer;
+}
+
+.number_input:focus{
+  outline: none;
+
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

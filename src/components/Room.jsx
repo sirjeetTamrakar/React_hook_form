@@ -6,10 +6,14 @@ import * as yup from "yup";
 import DateRangePicker from "@wojtekmaj/react-daterange-picker";
 
 const Room = () => {
-    const [value, onChange] = useState([new Date().getHours(), new Date().toLocaleDateString()]);
+    const [value, onChange] = useState([new Date(), new Date()]);
     const [countries, setCountries] = useState(null)
     const [selected, setSelected] = useState('')
-    const { register, handleSubmit, formState: { errors }, reset, control} = useForm();
+    const [rooms, setRooms] = useState(null);
+    const [adult, setAdult] = useState(1)
+    const [child, setChild] = useState(1);
+    const { register, handleSubmit, formState: { errors }, reset, setValue, control } = useForm();
+    const arr= [1]
     
     const Submit = data => {
             axios.post("http://localhost:8080/room", data);
@@ -27,6 +31,25 @@ const Room = () => {
     {
         setSelected(e.target.value)
     }
+
+    const handleSubAdult = (e) =>
+    {
+        e.preventDefault()
+        setAdult(adult-1)
+    }
+    const handleAddAdult = e => {
+			e.preventDefault();
+			setAdult(adult + 1);
+    };
+     const handleSubChild = e => {
+				e.preventDefault();
+				setChild(child - 1);
+			};
+	const handleAddChild = e => {
+		e.preventDefault();
+		setChild(child + 1);
+	};
+    
     
 
 	return (
@@ -57,9 +80,43 @@ const Room = () => {
 						placeholderText='Select date'
 						onChange={date => field.onChange(date)}
 						value={field.value}
+						minDate={new Date()}
 					/>
 				)}
-			/>
+            />
+            {arr.map((a) => (
+			<div key={a} className='room_adult_child'>
+				<div className='div'>
+					<p>Adult</p>
+					<div className='inner_div'>
+						<button onClick={handleSubAdult}>-</button>
+						<input
+							className='number_input'
+							type='number'
+							{...register("adult", {valueAsNumber: true})}
+							name='adult'
+							value={adult}
+						/>
+						<button onClick={handleAddAdult}>+</button>
+					</div>
+				</div>
+				<div className='div'>
+					<p>Child</p>
+					<div className='inner_div'>
+						<button onClick={handleSubChild}>-</button>
+						<input
+							className='number_input'
+							type='number'
+							{...register("child", {valueAsNumber: true})}
+							name='child'
+							value={child}
+						/>
+						<button onClick={handleAddChild}>+</button>
+					</div>
+				</div>
+			</div>
+            ))}
+
 			<button type='submit' className='final_button'>
 				Submit
 			</button>

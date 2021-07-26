@@ -1017,7 +1017,20 @@
       "code": "ZW"
     }
   ],
-  "form": [],
+  "form": [
+    {
+      "name": "Srijeet Tamrakar",
+      "email": "tsirjeet220@gmail.com",
+      "category": "Fruits",
+      "items": [
+        "Banana",
+        "Lemon"
+      ],
+      "password": "AN4soft@220",
+      "confirm_password": "AN4soft@220",
+      "id": 1
+    }
+  ],
   "room": [
     {
       "date": [
@@ -1097,6 +1110,528 @@
         "2021-07-15T18:14:59.999Z"
       ],
       "id": 10
+    },
+    {
+      "country": "",
+      "id": 11
+    },
+    {
+      "country": "Select a Country...",
+      "id": 12
+    },
+    {
+      "country": "Select a Country...",
+      "id": 13
+    },
+    {
+      "country": "Afghanistan",
+      "date": [
+        "2021-07-21T18:15:00.000Z",
+        "2021-07-25T18:14:59.999Z"
+      ],
+      "id": 14
+    },
+    {
+      "country": "Select a Country...",
+      "id": 15
+    },
+    {
+      "country": "Afghanistan",
+      "date": [
+        "2021-07-06T18:15:00.000Z",
+        "2021-07-14T18:14:59.999Z"
+      ],
+      "id": 16
+    },
+    {
+      "country": "Select a Country...",
+      "id": 17
+    },
+    {
+      "date": [
+        "2021-07-08T18:15:00.000Z",
+        "2021-07-16T18:14:59.999Z"
+      ],
+      "country": "Select a Country...",
+      "id": 18
+    },
+    {
+      "country": "Åland Islands",
+      "id": 19
+    },
+    {
+      "country": "Åland Islands",
+      "id": 20
+    },
+    {
+      "country": "Åland Islands",
+      "id": 21
+    },
+    {
+      "date": [
+        "2021-07-13T18:15:00.000Z",
+        "2021-07-21T18:14:59.999Z"
+      ],
+      "country": "Albania",
+      "id": 22
+    },
+    {
+      "country": "Åland Islands",
+      "date": [
+        "2021-07-06T18:15:00.000Z",
+        "2021-07-14T18:14:59.999Z"
+      ],
+      "id": 23
+    },
+    {
+      "country": "",
+      "id": 24
+    },
+    {
+      "country": "Select a Country...",
+      "id": 25
+    },
+    {
+      "country": "Select a Country...",
+      "id": 26
+    },
+    {
+      "country": "Select a Country...",
+      "id": 27
+    },
+    {
+      "country": "",
+      "id": 28
+    },
+    {
+      "country": "Select a Country...",
+      "id": 29
+    },
+    {
+      "country": "Select a Country...",
+      "id": 30
+    },
+    {
+      "country": "",
+      "id": 31
+    },
+    {
+      "country": "Select a Country...",
+      "id": 32
+    },
+    {
+      "country": "Select a Country...",
+      "id": 33
+    },
+    {
+      "country": "Select a Country...",
+      "id": 34
+    },
+    {
+      "country": "Select a Country...",
+      "id": 35
+    },
+    {
+      "country": "Select a Country...",
+      "id": 36
+    },
+    {
+      "country": "Select a Country...",
+      "id": 37
+    },
+    {
+      "country": "Select a Country...",
+      "id": 38
+    },
+    {
+      "country": "Select a Country...",
+      "id": 39
+    },
+    {
+      "country": "Select a Country...",
+      "id": 40
+    },
+    {
+      "country": "Select a Country...",
+      "id": 41
+    },
+    {
+      "country": "Select a Country...",
+      "id": 42
+    },
+    {
+      "country": "Select a Country...",
+      "id": 43
+    },
+    {
+      "country": "Select a Country...",
+      "id": 44
+    },
+    {
+      "country": "Select a Country...",
+      "id": 45
+    },
+    {
+      "country": "Select a Country...",
+      "id": 46
+    },
+    {
+      "country": "Select a Country...",
+      "id": 47
+    },
+    {
+      "country": "Select a Country...",
+      "id": 48
+    },
+    {
+      "date": [
+        "2021-07-05T18:15:00.000Z",
+        "2021-07-14T18:14:59.999Z"
+      ],
+      "country": "Algeria",
+      "id": 49
+    },
+    {
+      "country": "",
+      "id": 50
+    },
+    {
+      "country": "Select a Country...",
+      "id": 51
+    },
+    {
+      "country": "Select a Country...",
+      "id": 52
+    },
+    {
+      "country": "Select a Country...",
+      "id": 53
+    },
+    {
+      "country": "Select a Country...",
+      "id": 54
+    },
+    {
+      "country": "Select a Country...",
+      "id": 55
+    },
+    {
+      "country": "Select a Country...",
+      "id": 56
+    },
+    {
+      "country": "Select a Country...",
+      "id": 57
+    },
+    {
+      "country": "Select a Country...",
+      "id": 58
+    },
+    {
+      "country": "Select a Country...",
+      "id": 59
+    },
+    {
+      "date": [
+        "2021-07-13T18:15:00.000Z",
+        "2021-07-15T18:14:59.999Z"
+      ],
+      "country": "American Samoa",
+      "id": 60
+    },
+    {
+      "country": "",
+      "id": 61
+    },
+    {
+      "country": "Select a Country...",
+      "id": 62
+    },
+    {
+      "country": "Select a Country...",
+      "id": 63
+    },
+    {
+      "country": "Select a Country...",
+      "id": 64
+    },
+    {
+      "country": "Select a Country...",
+      "id": 65
+    },
+    {
+      "country": "Select a Country...",
+      "id": 66
+    },
+    {
+      "country": "Select a Country...",
+      "id": 67
+    },
+    {
+      "country": "Select a Country...",
+      "id": 68
+    },
+    {
+      "country": "Select a Country...",
+      "id": 69
+    },
+    {
+      "country": "",
+      "id": 70
+    },
+    {
+      "country": "Select a Country...",
+      "id": 71
+    },
+    {
+      "country": "Select a Country...",
+      "id": 72
+    },
+    {
+      "country": "Select a Country...",
+      "id": 73
+    },
+    {
+      "country": "Select a Country...",
+      "id": 74
+    },
+    {
+      "country": "Select a Country...",
+      "id": 75
+    },
+    {
+      "country": "Select a Country...",
+      "id": 76
+    },
+    {
+      "country": "",
+      "id": 77
+    },
+    {
+      "country": "Select a Country...",
+      "id": 78
+    },
+    {
+      "country": "Åland Islands",
+      "date": [
+        "2021-07-05T18:15:00.000Z",
+        "2021-07-14T18:14:59.999Z"
+      ],
+      "id": 79
+    },
+    {
+      "country": "Anguilla",
+      "date": [
+        "2021-07-06T18:15:00.000Z",
+        "2021-07-14T18:14:59.999Z"
+      ],
+      "id": 80
+    },
+    {
+      "date": [
+        "2021-07-06T18:15:00.000Z",
+        "2021-07-14T18:14:59.999Z"
+      ],
+      "country": "Åland Islands",
+      "id": 81
+    },
+    {
+      "country": "Afghanistan",
+      "date": [
+        "2021-07-22T18:15:00.000Z",
+        "2021-07-24T18:14:59.999Z"
+      ],
+      "id": 82
+    },
+    {
+      "country": "Select a Country...",
+      "id": 83
+    },
+    {
+      "country": "Select a Country...",
+      "id": 84
+    },
+    {
+      "country": "Afghanistan",
+      "id": 85
+    },
+    {
+      "country": "",
+      "id": 86
+    },
+    {
+      "date": [
+        "2021-07-09T18:15:00.000Z",
+        "2021-07-17T18:14:59.999Z"
+      ],
+      "country": "Albania",
+      "id": 87
+    },
+    {
+      "country": "Algeria",
+      "date": [
+        "2021-06-24T18:15:00.000Z",
+        "2021-06-30T18:14:59.999Z"
+      ],
+      "id": 88
+    },
+    {
+      "date": "2021-06-09T18:15:00.000Z",
+      "country": "Albania",
+      "id": 89
+    },
+    {
+      "country": "Albania",
+      "date": [
+        "2021-07-07T18:15:00.000Z",
+        "2021-07-15T18:14:59.999Z"
+      ],
+      "id": 90
+    },
+    {
+      "country": "Åland Islands",
+      "id": 91
+    },
+    {
+      "country": "Åland Islands",
+      "child": "4",
+      "id": 92
+    },
+    {
+      "date": [
+        "2021-07-06T18:15:00.000Z",
+        "2021-07-15T18:14:59.999Z"
+      ],
+      "country": "Antigua and Barbuda",
+      "adult": "2",
+      "child": "4",
+      "id": 93
+    },
+    {
+      "country": "Angola",
+      "date": [
+        "2021-07-07T18:15:00.000Z",
+        "2021-07-15T18:14:59.999Z"
+      ],
+      "id": 94
+    },
+    {
+      "country": "Select a Country...",
+      "adult": "11",
+      "child": "2",
+      "id": 95
+    },
+    {
+      "country": "Select a Country...",
+      "child": "2",
+      "id": 96
+    },
+    {
+      "country": "Select a Country...",
+      "adult": "11",
+      "child": "2",
+      "id": 97
+    },
+    {
+      "country": "Select a Country...",
+      "adult": "11",
+      "id": 98
+    },
+    {
+      "date": [
+        "2021-07-01T18:15:00.000Z",
+        "2021-07-09T18:14:59.999Z"
+      ],
+      "country": "Angola",
+      "adult": "11",
+      "child": "3",
+      "id": 99
+    },
+    {
+      "country": "",
+      "adult": "1",
+      "child": 1,
+      "id": 100
+    },
+    {
+      "country": "",
+      "adult": "1",
+      "child": 1,
+      "id": 101
+    },
+    {
+      "country": "Select a Country...",
+      "adult": "1",
+      "child": 1,
+      "id": 102
+    },
+    {
+      "country": "",
+      "adult": 1,
+      "child": 1,
+      "id": 103
+    },
+    {
+      "date": [
+        "2021-07-07T18:15:00.000Z",
+        "2021-07-15T18:14:59.999Z"
+      ],
+      "country": "Select a Country...",
+      "adult": 1,
+      "child": 1,
+      "id": 104
+    },
+    {
+      "country": "",
+      "adult": 1,
+      "child": 1,
+      "date": [
+        "2021-07-25T18:15:00.000Z",
+        "2021-07-31T18:14:59.999Z"
+      ],
+      "id": 105
+    },
+    {
+      "country": "Select a Country...",
+      "adult": 1,
+      "child": 1,
+      "id": 106
+    },
+    {
+      "date": [
+        "2021-07-29T18:15:00.000Z",
+        "2021-07-31T18:14:59.999Z"
+      ],
+      "country": "Select a Country...",
+      "adult": 1,
+      "child": 1,
+      "id": 107
+    },
+    {
+      "country": "American Samoa",
+      "adult": 1,
+      "child": 1,
+      "date": [
+        "2022-07-06T18:15:00.000Z",
+        "2022-07-21T18:14:59.999Z"
+      ],
+      "id": 108
+    },
+    {
+      "country": "Select a Country...",
+      "adult": 6,
+      "child": 1,
+      "id": 109
+    },
+    {
+      "country": "AndorrA",
+      "adult": 1,
+      "child": 1,
+      "date": [
+        "2021-07-28T18:15:00.000Z",
+        "2021-07-31T18:14:59.999Z"
+      ],
+      "id": 110
     }
   ]
 }
