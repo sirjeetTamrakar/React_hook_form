@@ -9,7 +9,7 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  height: auto;
   width: 100%;
 }
 
@@ -66,8 +66,9 @@ body {
 .room_details{
   display: flex;
   flex-direction: column;
-  height: 50vh;
+  height: auto;
   justify-content: space-evenly;
+  width: 20rem;
 }
 
 .nav_links{
@@ -77,8 +78,15 @@ body {
 
 .room_adult_child{
   display: flex;
-  flex-direction: row;
+  flex-direction:column;
   justify-content: space-between;
+}
+
+.adult, .child{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .room_adult_child .div{
@@ -104,8 +112,30 @@ body {
   outline: none;
 
 }
+
+.underline{
+  border-bottom: 2px solid slateblue;
+  padding: 0 1rem;
+}
+
+.underline:last-child{
+  margin-bottom: 2rem;
+}
+
+.remove_room{
+  margin-bottom: 1rem;
+}
+
+button{
+  cursor: pointer;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+h3{
+  text-align: center;
+  color: slateblue;
 }

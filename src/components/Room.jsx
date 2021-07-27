@@ -9,48 +9,95 @@ const Room = () => {
     const [value, onChange] = useState([new Date(), new Date()]);
     const [countries, setCountries] = useState(null)
     const [selected, setSelected] = useState('')
-    const [rooms, setRooms] = useState(null);
-    const [adult, setAdult] = useState(1)
-    const [child, setChild] = useState(1);
-    const { register, handleSubmit, formState: { errors }, reset, setValue, control } = useForm();
-    const arr= [1]
+	const [rooms, setRooms] = useState([{id:1, adult:1, child:1, ref_id:Math.random()*1000}])
+    const { register, handleSubmit, formState: { errors }, reset, control } = useForm();
     
     const Submit = data => {
             axios.post("http://localhost:8080/room", data);
-            console.log(data);
+            console.log(data, rooms);
 			reset();
-    };
+	};
 
     useEffect(() => {
 			axios
 				.get("http://localhost:8080/countries")
 				.then(res => setCountries(res.data));
-    }, []);
+	}, []);
     
     const handleChange = (e) =>
     {
         setSelected(e.target.value)
-    }
+	}
 
-    const handleSubAdult = (e) =>
-    {
-        e.preventDefault()
-        setAdult(adult-1)
-    }
-    const handleAddAdult = e => {
-			e.preventDefault();
-			setAdult(adult + 1);
-    };
-     const handleSubChild = e => {
-				e.preventDefault();
-				setChild(child - 1);
-			};
-	const handleAddChild = e => {
+	const AddRoom = (e) =>
+	{
 		e.preventDefault();
-		setChild(child + 1);
+		let no_of_rooms = rooms.length
+		setRooms([...rooms, {id:no_of_rooms+1, adult:1, child:1, ref_id:Math.random()*1000}])
+	}
+
+	const SubRoom = (roomID, e) =>
+	{
+		e.preventDefault()
+		let newRooms = [...rooms]
+		{setRooms(newRooms.filter((room) => room.id !== roomID))}
+	}
+	
+
+    const handleSubAdult =(roomID, e) =>
+	{
+		e.preventDefault()
+		let newRooms = [...rooms]
+		{
+			newRooms.map((newRoom) =>
+			{
+				if (newRoom.id === roomID)
+				{
+					newRoom.adult = newRoom.adult - 1;
+				}
+			})
+			
+		}
+		setRooms(newRooms);
+    }
+	const handleAddAdult = (roomID, e) =>
+	{
+			e.preventDefault()
+			let newRooms = [...rooms];
+			{
+				newRooms.map(newRoom => {
+					if (newRoom.id === roomID) {
+						newRoom.adult = newRoom.adult + 1;
+					}
+				});
+		}
+		setRooms(newRooms)
 	};
-    
-    
+	const handleSubChild = (roomID, e) =>
+	{
+		e.preventDefault()
+		let newRooms = [...rooms];
+		{
+			newRooms.map(newRoom => {
+				if (newRoom.id === roomID) {
+					newRoom.child = newRoom.child - 1;
+				}
+			});
+		}
+		setRooms(newRooms);
+	};
+	const handleAddChild = (roomID, e) =>
+	{
+		e.preventDefault()
+		let newRooms = [...rooms];
+		
+			newRooms.map(newRoom => {
+				if (newRoom.id === roomID) {
+					newRoom.child = newRoom.child + 1;
+				}
+			});
+		setRooms(newRooms);
+	};
 
 	return (
 		<form onSubmit={handleSubmit(Submit)} className='room_details'>
@@ -83,39 +130,28 @@ const Room = () => {
 						minDate={new Date()}
 					/>
 				)}
-            />
-            {arr.map((a) => (
-			<div key={a} className='room_adult_child'>
-				<div className='div'>
-					<p>Adult</p>
-					<div className='inner_div'>
-						<button onClick={handleSubAdult}>-</button>
-						<input
-							className='number_input'
-							type='number'
-							{...register("adult", {valueAsNumber: true})}
-							name='adult'
-							value={adult}
-						/>
-						<button onClick={handleAddAdult}>+</button>
+			/>
+			<div className='room_adult_child'>
+				{rooms.map(room => (
+					<div key={room.ref_id} className='underline'>
+						<h3>Room {room.id}</h3>
+						<div className='adult'>
+							<button onClick={e => handleSubAdult(room.id, e)}>-</button>
+							<p>Adult: {room.adult}</p>
+							<button onClick={e => handleAddAdult(room.id, e)}>+</button>
+						</div>
+						<div className='child'>
+							<button onClick={e => handleSubChild(room.id, e)}>-</button>
+							<p>Child: {room.child}</p>
+							<button onClick={e => handleAddChild(room.id, e)}>+</button>
+						</div>
+						<button onClick={e => SubRoom(room.id, e)} className='remove_room'>
+							Remove Room
+						</button>
 					</div>
-				</div>
-				<div className='div'>
-					<p>Child</p>
-					<div className='inner_div'>
-						<button onClick={handleSubChild}>-</button>
-						<input
-							className='number_input'
-							type='number'
-							{...register("child", {valueAsNumber: true})}
-							name='child'
-							value={child}
-						/>
-						<button onClick={handleAddChild}>+</button>
-					</div>
-				</div>
+				))}
 			</div>
-            ))}
+			<button onClick={e => AddRoom(e)}>Add Room</button>
 
 			<button type='submit' className='final_button'>
 				Submit
