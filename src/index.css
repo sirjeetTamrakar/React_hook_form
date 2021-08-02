@@ -14,7 +14,7 @@ body {
 }
 
 .main_form{
-  width: 20rem;
+  width: 30rem;
   height: max-content;
 }
 
@@ -31,6 +31,15 @@ body {
 
 .select_field, .select_field:focus{
   border: 2px solid slateblue;
+  margin: .5rem 0;
+  color: slateblue;
+  height: 2rem;
+  padding: 0 .5rem;
+}
+
+.date{
+   border: 1px solid slateblue;
+  margin: 2rem 0;
 }
 
 ::placeholder, .show_option{
@@ -39,6 +48,15 @@ body {
 
 .show_option{
   cursor: pointer;
+  padding: 0 .5rem;
+
+}
+
+.countries{
+  max-height: 5rem;
+  height: auto;
+  overflow-y: scroll;
+
 }
 
 .final_button{
@@ -55,6 +73,10 @@ body {
   background-color: rgb(65, 55, 130);
 }
 
+.add_room:hover, .remove_room:hover{
+  background-color: slategray;
+}
+
 
 .select_options{
   display: flex;
@@ -68,12 +90,14 @@ body {
   flex-direction: column;
   height: auto;
   justify-content: space-evenly;
-  width: 20rem;
+  width: 30rem;
 }
 
 .nav_links{
   display: flex;
-  justify-content: space-around;
+  width: 100%;
+  justify-content: space-between;
+  margin: 2rem 0;
 }
 
 .room_adult_child{
@@ -89,6 +113,22 @@ body {
   width: 100%;
 }
 
+.button, .add_room, .remove_room{
+  width: 7rem;
+  margin: .5rem auto;
+  background-color: rgb(65, 55, 130);
+  color: white;
+  border: none;
+  height: 2rem;
+  border-radius: .2rem;
+  transition: all .2s ease-in-out;
+
+}
+
+.remove_room{
+  margin-bottom: 1rem;
+}
+
 .room_adult_child .div{
   display: flex;
   justify-content: center;
@@ -102,9 +142,8 @@ body {
 }
 
 .number_input{
-  width: 2rem;
+  width: 2.5rem;
   text-align: center;
-  border: none;
     cursor: pointer;
 }
 
@@ -122,20 +161,74 @@ body {
   margin-bottom: 2rem;
 }
 
-.remove_room{
-  margin-bottom: 1rem;
-}
+ 
 
 button{
   cursor: pointer;
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+
+
+
+.main_Container{
+  border-bottom: 2px solid slateblue;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-h3{
+.container{
+  
+  margin: 1rem 2rem;
+}
+
+.container>:first-child{
+  margin-right: 2rem;
+}
+
+.filter_div{
+  width: 70rem;
+  text-align: center;
+}
+
+.selectors{
+  display: flex;
+  width: auto;
+  margin: 1rem auto;
+  justify-content: center;
+}
+
+.selectors>div{
+  margin-right: 2rem;
+  background-color: slateblue;
+  color: white;
+  cursor: pointer;
+  padding: .5rem;
+  border-radius: .2rem;
+  transition: .2s all ease-in-out;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  min-width: 2rem;
+}
+
+.selectors>div:hover{
+  background-color: rgb(250, 11, 11);
+}
+
+.products{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+  width:50rem;
+  margin: 0 auto;
+}
+
+select{
+  cursor: pointer;
+}
+
+h3, h2{
   text-align: center;
   color: slateblue;
 }

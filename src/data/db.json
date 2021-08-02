@@ -41,10 +41,6 @@
   ],
   "countries": [
     {
-      "name": "Select a Country...",
-      "code": "SE"
-    },
-    {
       "name": "Afghanistan",
       "code": "AF"
     },
@@ -1033,74 +1029,407 @@
   ],
   "room": [
     {
-      "country": "Antarctica",
-      "adult1": 1,
-      "child1": 1,
       "date": [
         "2021-07-28T18:15:00.000Z",
         "2021-07-31T18:14:59.999Z"
       ],
-      "adult2": 1,
-      "child2": 1,
+      "rooms": [
+        {
+          "adult": 4,
+          "child": 2
+        },
+        {
+          "adult": 2,
+          "child": 5
+        }
+      ],
+      "country": "Nepal",
       "id": 1
     },
     {
-      "country": "AndorrA",
-      "adult1": 1,
-      "child1": 1,
       "date": [
         "2021-07-27T18:15:00.000Z",
-        "2021-07-30T18:14:59.999Z"
+        "2021-08-05T18:14:59.999Z"
       ],
-      "adult2": 1,
-      "child2": 1,
-      "adult3": 1,
-      "child3": 1,
+      "country": "Bhutan",
+      "rooms": [
+        {
+          "adult": 2,
+          "child": 1
+        },
+        {
+          "adult": 3,
+          "child": 6
+        }
+      ],
       "id": 2
     },
     {
-      "country": "Algeria",
-      "adult1": 1,
-      "child1": 1,
       "date": [
-        "2021-07-27T18:15:00.000Z",
-        "2021-07-30T18:14:59.999Z"
+        "2021-07-28T18:15:00.000Z",
+        "2021-07-31T18:14:59.999Z"
       ],
-      "adult2": 1,
-      "child2": 1,
-      "adult3": 1,
-      "child3": 1,
+      "rooms": [
+        {
+          "adult": [
+            1
+          ],
+          "child": [
+            1
+          ]
+        }
+      ],
+      "country": "Bosnia and Herzegovina",
       "id": 3
     },
     {
-      "country": "Select a Country...",
-      "adult1": 6,
-      "child1": 2,
-      "adult2": 4,
-      "child2": 2,
-      "adult3": 1,
-      "child3": 5,
+      "date": [
+        "2021-07-28T18:15:00.000Z",
+        "2021-08-26T18:14:59.999Z"
+      ],
+      "country": "American Samoa",
+      "rooms": [
+        {
+          "adult": [
+            21
+          ],
+          "child": [
+            1
+          ]
+        }
+      ],
       "id": 4
     },
     {
-      "country": "",
+      "rooms": [
+        {
+          "adult": {
+            "54146d2a-7abd-4539-a159-407642c2041c": 1
+          },
+          "child": {
+            "54146d2a-7abd-4539-a159-407642c2041c": 1
+          }
+        },
+        {
+          "adult": {
+            "5b56b4b8-d87f-44f2-b4eb-03888c9a4524": 1
+          },
+          "child": {
+            "5b56b4b8-d87f-44f2-b4eb-03888c9a4524": 1
+          }
+        }
+      ],
       "id": 5
     },
     {
-      "country": "",
+      "rooms": [
+        {
+          "adult": 1,
+          "child": 1
+        }
+      ],
       "id": 6
     },
     {
-      "country": "",
+      "rooms": [
+        {
+          "adult": 1,
+          "child": 1
+        },
+        {
+          "adult": 3,
+          "child": 1
+        }
+      ],
       "id": 7
     },
     {
-      "country": "",
+      "rooms": [
+        {
+          "adult": 1,
+          "child": 1
+        },
+        {
+          "adult": 1,
+          "child": 1
+        }
+      ],
+      "country": "Sierra Leone",
       "id": 8
     },
     {
-      "country": "",
+      "date": [
+        "2021-07-28T18:15:00.000Z",
+        "2021-07-31T18:14:59.999Z"
+      ],
+      "rooms": [
+        {
+          "adult": -10,
+          "child": -4
+        },
+        {
+          "adult": 1,
+          "child": -3
+        }
+      ],
+      "country": "Saint Vincent and the Grenadines",
       "id": 9
+    },
+    {
+      "date": [
+        "2021-07-27T18:15:00.000Z",
+        "2021-07-29T18:14:59.999Z"
+      ],
+      "rooms": [
+        {
+          "adult": 3,
+          "child": 5
+        },
+        {
+          "adult": 1,
+          "child": 1
+        }
+      ],
+      "country": "Afghanistan",
+      "id": 10
+    },
+    {
+      "date": [
+        "2021-07-28T18:15:00.000Z",
+        "2021-07-30T18:14:59.999Z"
+      ],
+      "rooms": [
+        {
+          "adult": 4,
+          "child": 1
+        }
+      ],
+      "country": "Nepal",
+      "id": 11
+    },
+    {
+      "date": [
+        "2021-07-28T18:15:00.000Z",
+        "2021-08-19T18:14:59.999Z"
+      ],
+      "rooms": [
+        {
+          "adult": 3,
+          "child": 2
+        },
+        {
+          "adult": 1,
+          "child": 1
+        }
+      ],
+      "country": "Nepal",
+      "id": 12
+    },
+    {
+      "date": [
+        "2021-07-28T18:15:00.000Z",
+        "2021-07-30T18:14:59.999Z"
+      ],
+      "rooms": [
+        {
+          "adult": 1,
+          "child": 1
+        }
+      ],
+      "country": "New Caledonia",
+      "id": 13
+    },
+    {
+      "date": "2021-07-29T05:17:51.547Z",
+      "rooms": [],
+      "country": "nepal",
+      "id": 14
+    },
+    {
+      "date": [
+        "2021-07-29T18:15:00.000Z",
+        "2022-07-04T18:14:59.999Z"
+      ],
+      "rooms": [
+        {
+          "adult": 5,
+          "child": 2
+        },
+        {
+          "adult": 1,
+          "child": 1
+        }
+      ],
+      "country": "ne",
+      "id": 15
+    },
+    {
+      "date": "2021-07-30T05:06:15.896Z",
+      "rooms": [],
+      "country": "Brunei Darussalam",
+      "id": 16
+    },
+    {
+      "id": 17
+    },
+    {
+      "date": "2021-07-30T05:06:51.664Z",
+      "rooms": [],
+      "country": "Brunei Darussalam",
+      "id": 18
+    },
+    {
+      "country": "Serbia and Montenegro",
+      "id": 19
+    },
+    {
+      "country": "British Indian Ocean Territory",
+      "id": 20
+    },
+    {
+      "date": "2021-07-30T05:40:50.096Z",
+      "rooms": [],
+      "country": "ne",
+      "id": 21
+    },
+    {
+      "date": "2021-07-30T06:34:49.310Z",
+      "rooms": [],
+      "country": "new ",
+      "id": 22
     }
-  ]
+  ],
+  "login": [
+    {
+      "name": "Cyprus1",
+      "id": 1
+    },
+    {
+      "name": "qwerty",
+      "id": 2
+    },
+    {
+      "name": "nepal",
+      "id": 3
+    },
+    {
+      "name": "",
+      "id": 4
+    },
+    {
+      "name": "Cyprus1",
+      "id": 5
+    },
+    {
+      "name": "neymar",
+      "id": 6
+    }
+  ],
+  "products": [
+    {
+        "id": 1,
+        "name": "Almond Toe Court Shoes, Patent Black",
+        "category": "Womens Footwear",
+        "price": 99.00,
+        "stock": 5,
+        "size":"XXL"
+    },
+    {
+        "id": 2,
+        "name": "Suede Shoes, Blue",
+        "category": "Womens Footwear",
+        "price": 42.00,
+        "stock": 4,
+        "size":"L"
+    },
+    {
+        "id": 3,
+        "name": "Leather Driver Saddle Loafers, Tan",
+        "category": "Mens Footwear",
+        "price": 34.00,
+        "stock": 12,
+        "size":"XXL"
+    },
+    {
+        "id": 4,
+        "name": "Flip Flops, Red",
+        "category": "Mens Footwear",
+        "price": 19.00,
+        "stock": 6,
+        "size":"XL"
+    },
+    {
+        "id": 5,
+        "name": "Flip Flops, Blue",
+        "category": "Mens Footwear",
+        "price": 19.00,
+        "stock": 0,
+        "size":"XL"
+    },
+    {
+        "id": 6,
+        "name": "Gold Button Cardigan, Black",
+        "category": "Womens Casualwear",
+        "price": 167.00,
+        "stock": 6,
+        "size":"XXL"
+    },
+    {
+        "id": 7,
+        "name": "Cotton Shorts, Medium Red",
+        "category": "Womens Casualwear",
+        "price": 30.00,
+        "stock": 5,
+        "size":"L"
+    },
+    {
+        "id": 8,
+        "name": "Fine Stripe Short Sleeve￼Shirt, Grey",
+        "category": "Mens Casualwear",
+        "price": 49.99,
+        "stock": 9,
+        "size":"XXL"
+    },
+    {
+        "id": 9,
+        "name": "Fine Stripe Short Sleeve￼Shirt, Green",
+        "category": "Mens Casualwear",
+        "price": 49.99,
+        "offer": 39.99,
+        "stock": 9,
+        "size":"XXL"
+    },
+    {
+        "id": 10,
+        "name": "Sharkskin Waistcoat, Charcoal",
+        "category": "Mens Formalwear",
+        "price": 75.00,
+        "stock": 2,
+        "size":"XL"
+    },
+    {
+        "id": 11,
+        "name": "Lightweight Patch Pocket￼Blazer, Deer",
+        "category": "Mens Formalwear",
+        "price": 175.50,
+        "stock": 1,
+        "size":"L"
+    },
+    {
+        "id": 12,
+        "name": "Bird Print Dress, Black",
+        "category": "Womens Formalwear",
+        "price": 270.00,
+        "stock": 10,
+        "size":"XL"
+    },
+    {
+        "id": 13,
+        "name": "Mid Twist Cut-Out Dress, Pink",
+        "category": "Womens Formalwear",
+        "price": 540.00,
+        "stock": 5,
+        "size":"L"
+    }
+    ]
 }

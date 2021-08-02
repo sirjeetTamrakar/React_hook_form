@@ -1,161 +1,111 @@
-import React, {useState, useEffect} from "react";
-import {Controller, useForm} from "react-hook-form";
+import React, {useState, useEffect, useRef} from "react";
+import {Controller, useForm, useFieldArray} from "react-hook-form";
 import axios from "axios";
-import {yupResolver} from "@hookform/resolvers/yup";
-import * as yup from "yup";
 import DateRangePicker from "@wojtekmaj/react-daterange-picker";
 
 const Room = () => {
     const [value, onChange] = useState([new Date(), new Date()]);
     const [countries, setCountries] = useState(null)
-    const [selected, setSelected] = useState('')
-	const [rooms, setRooms] = useState([{id:1, adult:1, child:1, ref_id:Math.random()*1000}])
-    const { register, handleSubmit, formState: { errors }, reset, control } = useForm();
-    
+	const [selected, setSelected] = useState('')
+	const [search, setSearch] = useState('')
+	const [show, setShow] = useState(false)
+	const [toggle, setToggle] = useState(false)
+	const { register, handleSubmit, formState: { errors }, reset, control, setValue } = useForm();
+
+	const showRef = useRef()
+	
+	const {fields, append, remove} = useFieldArray({
+		control,
+		name: "rooms",
+	});
+
+	 useEffect(() => {
+		const checkIfClickedOutside = e => {
+			if (show && showRef.current && !showRef.current.contains(e.target)) {
+				setShow(false)
+			}
+			}
+				document.addEventListener("mousedown", checkIfClickedOutside)
+			return () => {
+				document.removeEventListener("mousedown", checkIfClickedOutside)
+			}
+	 }, [show])
+	
+	
     const Submit = data => {
             axios.post("http://localhost:8080/room", data);
-            console.log(data, rooms);
+            console.log(data);
 			reset();
 	};
+	
 
     useEffect(() => {
-			axios
-				.get("http://localhost:8080/countries")
+			axios.get("http://localhost:8080/countries")
 				.then(res => setCountries(res.data));
 	}, []);
     
-    const handleChange = (e) =>
+    const handleCountryChange = (country) =>
     {
-        setSelected(e.target.value)
+        setSearch(country)
 	}
-
-	const AddRoom = (e) =>
-	{
-		e.preventDefault();
-		let no_of_rooms = rooms.length
-		setRooms([...rooms, {id:no_of_rooms+1, adult:1, child:1, ref_id:Math.random()*1000}])
-	}
-
-	const SubRoom = (roomID, e) =>
-	{
-		e.preventDefault()
-		let newRooms = [...rooms]
-		{setRooms(newRooms.filter((room) => room.id !== roomID))}
-	}
-	
-
-    const handleSubAdult =(roomID, e) =>
-	{
-		e.preventDefault()
-		let newRooms = [...rooms]
-		{
-			newRooms.map((newRoom) =>
-			{
-				if (newRoom.id === roomID)
-				{
-					newRoom.adult = newRoom.adult - 1;
-				}
-			})
-			
-		}
-		setRooms(newRooms);
-    }
-	const handleAddAdult = (roomID, e) =>
-	{
-			e.preventDefault()
-			let newRooms = [...rooms];
-			{
-				newRooms.map(newRoom => {
-					if (newRoom.id === roomID) {
-						newRoom.adult = newRoom.adult + 1;
-					}
-				});
-		}
-		setRooms(newRooms)
-	};
-	const handleSubChild = (roomID, e) =>
-	{
-		e.preventDefault()
-		let newRooms = [...rooms];
-		{
-			newRooms.map(newRoom => {
-				if (newRoom.id === roomID) {
-					newRoom.child = newRoom.child - 1;
-				}
-			});
-		}
-		setRooms(newRooms);
-	};
-	const handleAddChild = (roomID, e) =>
-	{
-		e.preventDefault()
-		let newRooms = [...rooms];
-		
-			newRooms.map(newRoom => {
-				if (newRoom.id === roomID) {
-					newRoom.child = newRoom.child + 1;
-				}
-			});
-		setRooms(newRooms);
-	};
-
 	return (
-		<form onSubmit={handleSubmit(Submit)} className='room_details'>
-			<select
-				className='select_field'
-				{...register("country")}
-				onChange={handleChange}
-			>
-				{countries &&
-					countries.map(country => {
-						return (
-							<option
-								className='show_option'
-								value={country.name}
-								key={country.name}
-							>
-								{country.name}
-							</option>
-						);
-					})}
-			</select>
-			<Controller
-				control={control}
-				name='date'
-				render={({field}) => (
-					<DateRangePicker
-						placeholderText='Select date'
-						onChange={date => field.onChange(date)}
-						value={field.value}
-						minDate={new Date()}
-					/>
-				)}
-			/>
-			<div className='room_adult_child'>
-				{rooms.map(room => (
-					<div key={room.ref_id} className='underline'>
-						<h3>Room {room.id}</h3>
-						<div className='adult'>
-							<button onClick={e => handleSubAdult(room.id, e)}>-</button>
-							<p>Adult: {room.adult}</p>
-							<button onClick={e => handleAddAdult(room.id, e)}>+</button>
-						</div>
-						<div className='child'>
-							<button onClick={e => handleSubChild(room.id, e)}>-</button>
-							<p>Child: {room.child}</p>
-							<button onClick={e => handleAddChild(room.id, e)}>+</button>
-						</div>
-						<button onClick={e => SubRoom(room.id, e)} className='remove_room'>
-							Remove Room
-						</button>
-					</div>
-				))}
-			</div>
-			<button onClick={e => AddRoom(e)}>Add Room</button>
+		<form ref={showRef} onSubmit={handleSubmit(Submit)} className='room_details' >
 
-			<button type='submit' className='final_button'>
-				Submit
-			</button>
+			<input
+				className='select_field'
+				type='text'
+				onChange={e => (setSearch(e.target.value), setValue("country", e.target.value))}
+				placeholder='Search...'
+				value={search}
+				name='country'
+				autoComplete='off'
+			/>
+			<div className='countries'>
+				{countries &&
+					countries
+						.filter(country => {
+							if (search === "") {
+								return null;
+							} else if (
+								country.name.toLowerCase().includes(search.toLowerCase())
+							) {
+								return country;
+							}
+						})
+						.map(country => {
+							return (
+								<div className='show_option' key={country.name} onClick={() => (handleCountryChange(country.name), setValue('country',country.name))} >
+									{country.name}
+								</div>
+							);
+						})}
+			</div>
+			<Controller control={control} name='date' defaultValue={new Date()} render={({ field }) => (<DateRangePicker placeholderText='Select date' onChange={date => field.onChange(date)} value={field.value} minDate={new Date()} className='date' /> )} />
+			<button type='button' onClick={() => setShow(!show)}>{show?`Hide`:`Show`} Rooms</button>
+
+			{show ? (
+				<>
+					{fields.map((field, index) => (
+						<div key={field.id} className='main_Container'>
+							<div className='container'>
+								<label htmlFor='adult' name='adult'>
+									Adult:
+								</label>
+								<input className='number_input' type='number' {...register(`rooms[${index}].adult`, {valueAsNumber: true})} defaultValue={1} />
+							</div>
+							<div className='container'>
+								<label htmlFor='child' name='child'>
+									Child:
+								</label>
+								<input className='number_input' type='number' {...register(`rooms[${index}].child`, {valueAsNumber: true})} defaultValue={1} />
+							</div>
+							<button type='button' className='remove_room' onClick={() => remove(index)} > Remove Room </button>
+						</div>
+					))}
+					<button type='button' onClick={() => append({})} className='add_room'> Add Room </button>
+				</>
+			) : null}
+			<button type='submit' className='final_button'> Submit </button>
 		</form>
 	);
 }
